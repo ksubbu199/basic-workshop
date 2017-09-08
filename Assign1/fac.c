@@ -1,19 +1,14 @@
 #include <stdio.h>
 
+int fac(int n)
+{
+	if(n<2) return 1;
+
+	return n*fac(n-1);
+}
 int main()
 {
-	int fac,n,i;
-	
+	int n;
 	scanf("%d",&n);
-
-	fac=1;
-	i=1;
-
-	while(fac<=n)
-	{
-		printf("%d ",fac);
-		fac=fac*i;
-		i++;
-	}
-	printf("\n");
+	printf("%d\n",fac(n));
 }
